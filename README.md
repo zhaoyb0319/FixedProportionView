@@ -1,0 +1,2 @@
+# FixedProportionView
+实现固定比例的自定义视图，可通过属性或方法动态修改，可复用实现机制用于各View
