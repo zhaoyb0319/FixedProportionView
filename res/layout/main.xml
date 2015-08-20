@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fixed="http://schemas.android.com/apk/res/cn.zhaoyb.widget" 
+    xmlns:fixed="http://schemas.android.com/apk/res/cn.zhaoyb.widget"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@android:color/white" >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <LinearLayout
+        <cn.zhaoyb.widget.FixedProportionView
+            android:id="@+id/test_proportion_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light" >
+            android:background="@android:color/holo_orange_light"
+            fixed:proportionH="2"
+            fixed:proportionW="3" />
 
-            <cn.zhaoyb.widget.FixedProportionView
-                android:id="@+id/test_proportion_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/darker_gray"
-                fixed:proportionH="2"
-                fixed:proportionW="3" />
-
-        </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_weight="1"
             android:background="@android:color/holo_orange_light" />
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="200dp"
@@ -39,11 +34,12 @@
             android:background="@android:color/holo_orange_light" />
     </LinearLayout>
 
-    <Button 
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minEms="4"
         android:layout_centerInParent="true"
-        android:text="@string/btn_text"
-        android:onClick="toUpdate"/>
+        android:minEms="4"
+        android:onClick="toUpdate"
+        android:text="@string/btn_text" />
+
 </RelativeLayout>
